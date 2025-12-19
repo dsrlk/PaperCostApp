@@ -6,6 +6,17 @@ import pandas as pd
 import streamlit as st
 import matplotlib.pyplot as plt
 from pathlib import Path
+st.markdown(
+    """
+    <style>
+        #MainMenu {visibility: hidden;}
+        footer {visibility: hidden;}
+        header {visibility: hidden;}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 
 # =========================
 # Paths (NEW STRUCTURE)
@@ -404,3 +415,4 @@ with right:
             st.markdown("### Box formula used")
             st.write(f"**Box Type:** {box_type}  ({size_type} / {unit})")
             st.code(f"Sheet Length Expr: {sheet_len_expr}\nSheet Width  Expr: {sheet_wid_expr}")
+
